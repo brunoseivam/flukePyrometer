@@ -1,0 +1,41 @@
+getString {
+    out "?\$1";
+    in "!\$1%s";
+}
+
+getEnum {
+    out "?\$1";
+    in "!\$1%{\$2}";
+}
+
+setEnum {
+    @init { getEnum; }
+    out "\$1=%{\$2}";
+    in "!\$1%*s";
+}
+
+getFloat {
+    out "?\$1";
+    in "!\$1%f";
+}
+
+setFloat {
+    @init { getFloat; }
+    out "?\$1";
+    in "!\$1%*f";
+}
+
+getFloatWithUnits {
+    out "?U";
+    in "!U%(EGU)s";
+    out "?\$1";
+    in "!\$1%f";
+}
+
+setFloatWithUnits {
+    @init { getFloatWithUnits; }
+    out "?U";
+    in "!U%(EGU)s";
+    out "?\$1";
+    in "!\$1%*f";
+}

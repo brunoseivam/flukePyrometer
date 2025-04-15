@@ -1,0 +1,76 @@
+file "base.template" { {} }
+
+file "string.template" {
+pattern
+{ RW,  NAME,               DESC,                       CMD,    SCAN      }
+{ "#", "SensorName",       "Sensor Name",              "XU",   "Passive" }
+{ "#", "SensorSerialNum",  "Sensor Serial Number",     "XV",   "Passive" }
+{ "#", "FirmwareRevision", "Firmware Revision Number", "XR",   "Passive" }
+{ "#", "GatewayAddress",   "Gateway Address",          "GW",   "Passive" }
+{ "#", "IPAddress",        "IP Address",               "IP",   "Passive" }
+{ "#", "MACAddress",       "MAC Address",              "MAC",  "Passive" }
+{ "#", "NetMask",          "Net Mask",                 "NM",   "Passive" }
+#{ "#", "ProfiNetName",     "ProfiNet Name",            "PNN",  "Passive" }
+{ "#", "IPPort",           "IP Port",                  "PORT", "Passive" }
+}
+
+file "enum.template" {
+pattern
+{ RW,  NAME,               DESC,                           CMD,    CHOICES,    SCAN,       ZRST,         ONST,            TWST,        THST,          FRST,         FVST, SXST }
+{ "",  "Units",            "Temperature Units",            "U",    "C|F"       "Passive",  "C",          "F",             "",          "",            "",           "",   ""   }
+{ "",  "AmbCompsCtrl",     "Ambient Compens. Control",     "AC",   "0|1|2"     "Passive",  "No Comp",    "Comp By Cmd",   "Ext Inp",   "",            "",           "",   ""   }
+{ "",  "DigitalFilter",    "Digital Filter",               "DF",   "0|1"       "Passive",  "Off",        "On",            "",          "",            "",           "",   ""   }
+{ "#", "DhcpBootp",        "DHCP / BOOTP",                 "DHCP", "0|1|2",    "Passive",  "Off",        "DHCP On",       "BOOTP On",  "",            "",           "",   ""   }
+{ "#", "EmissSource",      "Emissivity Source",            "ES",   "I|E"       "1 second", "By E",       "By Analog Inp", "",          "",            "",           "",   ""   }
+{ "#", "RS485Mode",        "RS485 Mode",                   "HM",   "2|4"       "Passive",  "2 wire",     "4 wire",        "",          "",            "",           "",   ""   }
+{ "#", "AnalogInpMode",    "Analog Input Mode",            "INM",  "0|4"       "Passive",  "0-20 mA",    "4-20 mA",       "",          "",            "",           "",   ""   }
+{ "",  "SwPanelLock",      "Switch Panel Lock",            "J",    "L|U"       "Passive",  "Locked",     "Unlocked",      "",          "",            "",           "",   ""   }
+{ "",  "RelayAlrmOutCtrl", "Relay Alarm Output Ctrl",      "K",    "0|1|2|3"   "Passive",  "Perm Open",  "Perm Closed",   "Norm Open", "Norm Closed", "",           "",   ""   }
+{ "",  "ColorMode",        "Color Mode",                   "M",    "1|2"       "Passive",  "1-color",    "2-color",       "",          "",            "",           "",   ""   }
+{ "",  "OutputFormat",     "Output Format",                "OIF",  "0|1"       "Passive",  "OneDecimal", "Integer",       "",          "",            "",           "",   ""   }
+
+{ "#", "BaudRate",         "Baud Rate (bps)",              "D",    "012|024|096|192|384|576|1152", "Passive", "1200", "2400", "9600", "19200", "38400", "57600", "115200" }
+}
+
+file "floatTemp.template" {
+pattern
+{ RW,  NAME,               DESC,                          CMD,    PREC, SCAN       }
+{ "",  "BgTempCorr",       "Background Temp Correction",  "A",    "1"   "Passive"  }
+{ "",  "TopOfmARange",     "Top of mA Range",             "AH",   "1"   "Passive"  }
+{ "",  "BotOfmARange",     "Bottom of mA Range",          "AL",   "1"   "Passive"  }
+{ "",  "AdvHoldThres",     "Advanced Hold Threshold",     "C",    "1"   "Passive"  }
+{ "#", "ExtBoardTemp",     "Extension Board Temperature", "EBT",  "1"   "1 second" }
+{ "",  "TopOfmATempRange", "Top of mA Temp Range",        "H",    "1"   "Passive"  }
+{ "",  "BotOfmATempRange", "Bottom of mA Temp Range",     "L",    "1"   "Passive"  }
+{ "#", "SensIntAmbTemp",   "Sensor Internal Amb Temp",    "I",    "1"   "1 second" }
+{ "#", "TargetTemp1CNarr", "Target Temp 1C Narrow",       "N",    "1"   "1 second" }
+}
+
+file "float.template" {
+pattern
+{ RW,  NAME,                DESC,                         CMD,   PREC, EGU,  MIN,    MAX,      SCAN       }
+{ "",  "AdvHoldWithAvg",    "Advanced Hold With Avg",     "AA",  "1"   "s",  "0",    "300",    "Passive"  }
+{ "",  "AlrmTopmAOutput",   "Alarm Top mA output",        "AHO", "1"   "mA", "20",   "24",     "Passive"  }
+{ "",  "AlrmBotmAOutput",   "Alarm Bottom mA output",     "ALO", "1"   "mA", "0",    "4",      "Passive"  }
+{ "#", "MeasAtten",         "Measured Attenuation",       "B",   "1"   "%",  "0",    "99",     "1 second" }
+{ "",  "BurstSpeed",        "Burst Speed",                "BS",  "0"   "ms", "5",    "10000",  "Passive"  }
+{ "#", "CurrEmissivity",    "Current Emissivity",         "CE",  "3"   "",   "0.1",  "1.1",    "1 second" }
+{ "",  "SensorGain",        "Sensor Gain",                "DG",  "3"   "",   "0.8",  "1.2",    "Passive"  }
+{ "",  "TopSensorGain",     "Top Sensor Gain",            "DGT", "3"   "",   "0.8",  "1.2",    "Passive"  }
+{ "",  "SensorOffset",      "Sensor Offset",              "DO",  "1"   "",   "-200", "200",    "Passive"  }
+{ "",  "TopSensorOffset",   "Top Sensor Offset",          "DOT", "1"   "",   "-200", "200",    "Passive"  }
+{ "",  "Emissivity",        "Emissivity",                 "E",   "3"   "",   "0.1",  "1.1",    "1 second" }
+{ "",  "ValleyHoldTime",    "Valley Hold Time",           "F",   "1"   "s",  "0",    "300",    "Passive"  }
+{ "",  "AverageTime",       "Average Time",               "G",   "1"   "s",  "0",    "300",    "Passive"  }
+{ "#", "AnalogInpmA",       "Analog Input mA",            "IN",  "1"   "mA", "0",    "20",     "1 second" }
+{ "",  "AnalogOutGain",     "Analog Output Gain",         "OUG", "3"   "",   "0.01", "100",    "Passive"  }
+{ "",  "AnalogOutOffset",   "Analog Output Offset",       "OUO", "1"   "",   "-200", "200",    "Passive"  }
+{ "",  "PeakHoldTime",      "Peak Hold Time",             "P",   "1"   "s",  "0",    "300",    "Passive"  }
+{ "#", "WidePower",         "Wide Power",                 "Q",   "5"   "",   "",     "",       "1 second" }
+{ "#", "NarrowPower",       "Narrow Power",               "R",   "5"   "",   "",     "",       "1 second" }
+{ "#", "VideoRelRetDiam",   "Video Rel Reticule Diam",    "RC",  "2",  "",   "",     "",       "1 second" }
+{ "#", "RatioSpecCorrGain", "Ratio Spec Corr Gain",       "RSG", "1",  "",   "",     "",       "1 second" }
+{ "#", "RatioSpecCorrIcpt", "Ratio Spec Corr Intercept",  "RSO", "1",  "",   "",     "",       "1 second" }
+{ "#", "VideoRelRetX",      "Video Rel Reticule X",       "RX",  "2",  "",   "",     "",       "1 second" }
+{ "#", "VideoRelRetY",      "Video Rel Reticule Y",       "RY",  "2",  "",   "",     "",       "1 second" }
+}

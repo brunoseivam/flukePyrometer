@@ -1,0 +1,14 @@
+$(RW=)record(stringout, "$(P)$(R)$(NAME)") {
+$(RW=)    field(DESC, "$(DESC)")
+$(RW=)    field(DTYP, "stream")
+$(RW=)    field(OUT,  "@flukePyrometer.proto setString($(CMD)) $(PORT)")
+$(RW=)    field(FLNK, "$(P)$(R)$(NAME) PP")
+$(RW=)}
+
+record(stringin, "$(P)$(R)$(NAME)_RBV") {
+    field(DESC, "$(DESC)")
+    field(DTYP, "stream")
+    field(INP,  "@flukePyrometer.proto getString($(CMD)) $(PORT)")
+    field(PINI, "YES")
+    field(SCAN, "$(SCAN=Passive)")
+}

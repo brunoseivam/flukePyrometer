@@ -6,11 +6,13 @@ PROD_IOC = flukePyrometer
 DBD += $(PROD_IOC).dbd
 
 $(PROD_IOC)_DBD += base.dbd
-$(PROD_IOC)_DBD += asyn.dbd
-$(PROD_IOC)_DBD += calc.dbd
+$(PROD_IOC)_DBD += asyn.dbd drvAsynIPPort.dbd
+$(PROD_IOC)_DBD += asSupport.dbd
+$(PROD_IOC)_DBD += calcSupport.dbd
 $(PROD_IOC)_DBD += stream.dbd
 
 $(PROD_IOC)_LIBS += asyn
+$(PROD_IOC)_LIBS += autosave
 $(PROD_IOC)_LIBS += calc
 $(PROD_IOC)_LIBS += stream
 

@@ -1,0 +1,6 @@
+file "enum.template" {
+pattern
+{ RW,  NAME,               DESC,                           CMD,    CHOICES,    SCAN,       ZRST,      ONST,            TWST,        THST,          FRST,         FVST, SXST }
+{ "",  "CamColorMode",     "Camera Color Mode",            "CCM",  "C|M|R|G|B" "Passive",  "Colors",  "ColorsToGray",  "RedToGray", "GreenToGray", "BlueToGray", "",   ""   }
+{ "",  "CamAutoGain",      "Camera Auto Gain",             "CGM",  "0|1"       "Passive",  "Off",     "On",            "",          "",            "",           "",   ""   }
+}

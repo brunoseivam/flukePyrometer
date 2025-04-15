@@ -1,0 +1,20 @@
+$(RW=)record(ao, "$(P)$(R)$(NAME)") {
+$(RW=)    field(DESC, "$(DESC)")
+$(RW=)    field(DTYP, "stream")
+$(RW=)    field(OUT,  "@flukePyrometer.proto setFloat($(CMD)) $(PORT)")
+$(RW=)    field(FLNK, "$(P)$(R)$(NAME)_RBV PP")
+$(RW=)    field(PREC, "$(PREC=1)")
+$(RW=)    field(DRVL, "$(MIN=)")
+$(RW=)    field(DRVH, "$(MAX=)")
+$(RW=)}
+
+record(ai, "$(P)$(R)$(NAME)_RBV") {
+    field(DESC, "$(DESC)")
+    field(DTYP, "stream")
+    field(INP,  "@flukePyrometer.proto getFloat($(CMD)) $(PORT)")
+    field(SCAN, "$(SCAN=Passive)")
+    field(PREC, "$(PREC=1)")
+    field(LOPR, "$(MIN=)")
+    field(HOPR, "$(MAX=)")
+    field(PINI, "YES")
+}
