@@ -3,3 +3,21 @@
 #TODO: OC (output current)
 
 #TODO: Reset (RST)
+
+#TODO: Restore Factory defaults (XF)
+
+#TODO: handle error codes EUUU etc (under range)
+
+#TODO: autosave
+
+#TODO: variable scan rate
+
+#TODO: get temp EGU from Units PV
+
+record(bo, "$(P)$(R)PollBurstMode") {
+    field(DESC, "Pool/Burst Mode")
+    field(DTYP, "stream")
+    field(OUT,  "@flukePyrometer.proto setEnumNoInit(V,P|B) $(PORT)")
+    field(VAL,  "0")
+    field(PINI, "YES")
+}
