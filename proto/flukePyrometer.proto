@@ -43,4 +43,15 @@ setFloatWithUnits {
     in "!U%(EGU)s";
     out "?\$1";
     in "!\$1%*f";
+    # Handle Fail-Safe Error Codes
+    @mismatch { in "!\$1E%*s"; }
+}
+
+sendCommand {
+    out "\$1";
+}
+
+getHex {
+    out "?\$1";
+    in "!\$1%X";
 }

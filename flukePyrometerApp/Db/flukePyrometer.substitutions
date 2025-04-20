@@ -55,9 +55,9 @@ pattern
 { "",  "",  "TopOfmATempRange",  "Top of mA Temp Range",        "H",    "1"   "Passive"   }
 { "",  "",  "BotOfmATempRange",  "Bottom of mA Temp Range",     "L",    "1"   "Passive"   }
 { "#", "",  "SensIntAmbTemp",    "Sensor Internal Amb Temp",    "I",    "1"   ".1 second" }
-#{ "#", "",  "TargetTemp1CNarr",  "Target Temp 1C Narrow",       "N",    "1"   "1 second" }
-#{ "#", "",  "TargetTemp1CWide",  "Target Temp 1C Wide",         "W",    "1"   "1 second" }
-#{ "#", "",  "TargetTemp2C",      "Target Temp 2C",              "T",    "1"   "1 second" }
+{ "#", "",  "TargetTemp1CNarr",  "Target Temp 1C Narrow",       "N",    "1"   ".1 second" }
+{ "#", "",  "TargetTemp1CWide",  "Target Temp 1C Wide",         "W",    "1"   ".1 second" }
+{ "#", "",  "TargetTemp2C",      "Target Temp 2C",              "T",    "1"   ".1 second" }
 { "",  "",  "SetTargetTemp",     "Set Target Temperature",      "STT",  "1"   "Passive"   }
 { "",  "",  "LowTempLimit",      "Low Temperature Limit",       "XB",   "1"   "Passive"   }
 { "",  "",  "HighTempLimit",     "High Temperature Limit",      "XH",   "1"   "Passive"   }
@@ -101,4 +101,25 @@ pattern
 { "",  "",  "Transmissivity",    "Transmissivity",             "XG",  "2"   "",   "0.1",  "1.1",    "Passive"  }
 { "",  "",  "AttenToActRelay",   "Atten to Activate Relay",    "Y",   "0"   "%",  "0",    "95",     "Passive"  }
 { "",  "",  "AttenForFailsafe",  "Atten for Failsafe",         "Z",   "0"   "%",  "0",    "95",     "Passive"  }
+}
+
+file "errorbit.template" {
+pattern
+{ BIT,  NAME,                   DESC,                           }
+{ "0",  "HeatCtlTempOverRng",   "Heater Ctrl Temp Over Range"   }
+{ "1",  "HeatCtlTempUnderRng",  "Heater Ctrl Temp Under Range"  }
+{ "2",  "InternTempUnderRng",   "Internal Temp Under Range"     }
+{ "3",  "InternTempOverRng",    "Internal Temp Over Range"      }
+{ "4",  "WideBandDetFail",      "Wide Band Detector Failure"    }
+{ "5",  "NarrBandDetFail",      "Narrow Band Detector Failure"  }
+{ "6",  "EnergyTooLow",         "Energy Too Low"                }
+{ "7",  "AttenTooHigh",         "Attenuation Too High (>95%)"   }
+{ "8",  "AttenOver95Pct",       "Atten > 95% (Dirty Window)"    }
+{ "9",  "TwoCTempUnderRng",     "Two Color Temp Under Range"    }
+{ "A",  "TwoCTempOverRng",      "Two Color Temp Over Range"     }
+{ "B",  "WideBandTempUnderRng", "Wide Band Temp Under Range"    }
+{ "C",  "WideBandTempOverRng",  "Wide Band Temp Over Range"     }
+{ "D",  "NarrBandTempUnderRng", "Narrow Band Temp Under Range"  }
+{ "E",  "NarrBandTempOverRng",  "Narrow Band Temp Over Range"   }
+{ "F",  "AlarmDetection",       "Alarm Detection"               }
 }

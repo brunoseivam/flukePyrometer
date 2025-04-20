@@ -1,12 +1,6 @@
-#TODO: Error Codes (EC)
-
 #TODO: OC (output current)
 
-#TODO: Reset (RST)
-
-#TODO: Restore Factory defaults (XF)
-
-#TODO: handle error codes EUUU etc (under range)
+#TODO: distribute temperature unit change
 
 #TODO: autosave
 
@@ -14,10 +8,20 @@
 
 #TODO: get temp EGU from Units PV
 
+#TODO: reset RST, XR
+
 record(bo, "$(P)$(R)PollBurstMode") {
     field(DESC, "Pool/Burst Mode")
     field(DTYP, "stream")
     field(OUT,  "@flukePyrometer.proto setEnumNoInit(V,P|B) $(PORT)")
     field(VAL,  "0")
     field(PINI, "YES")
+}
+
+record(mbbiDirect, "$(P)$(R)ErrorCodes_RBV") {
+    field(DESC, "Error Codes")
+    field(DTYP, "stream")
+    field(INP,  "@flukePyrometer.proto getHex(EC) $(PORT)")
+    field(PINI, "YES")
+    field(SCAN, ".1 second")
 }
