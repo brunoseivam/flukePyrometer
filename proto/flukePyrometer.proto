@@ -1,3 +1,5 @@
+LockTimeout = 20000;
+
 getString {
     out "?\$1";
     in "!\$1%s";
@@ -31,16 +33,17 @@ setFloat {
 }
 
 getFloatWithUnits {
-    out "?U";
-    in "!U%(EGU)s";
+    #out "?U";
+    #in "!U%(EGU)s";
     out "?\$1";
     in "!\$1%f";
+    @mismatch { in "!\$1E%*s"; }
 }
 
 setFloatWithUnits {
     @init { getFloatWithUnits; }
-    out "?U";
-    in "!U%(EGU)s";
+    #out "?U";
+    #in "!U%(EGU)s";
     out "?\$1";
     in "!\$1%*f";
     # Handle Fail-Safe Error Codes

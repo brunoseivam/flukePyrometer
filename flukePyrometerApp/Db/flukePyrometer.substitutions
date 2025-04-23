@@ -23,7 +23,7 @@ pattern
 { "#", "",  "DhcpBootp",        "DHCP / BOOTP",                  "DHCP", "0|1|2",     "Passive",  "Off",        "DHCP On",       "BOOTP On",  "",             "",             "",   ""   }
 { "",  "",  "EmissSource",      "Emissivity Source",             "ES",   "I|E",       "Passive",  "By E",       "By Analog Inp", "",          "",             "",             "",   ""   }
 { "#", "",  "RS485Mode",        "RS485 Mode",                    "HM",   "2|4",       "Passive",  "2 wire",     "4 wire",        "",          "",             "",             "",   ""   }
-{ "#", "",  "AnalogInpMode",    "Analog Input Mode",             "INM",  "0|4",       "Passive",  "0-20 mA",    "4-20 mA",       "",          "",             "",             "",   ""   }
+{ "",  "",  "AnalogInpMode",    "Analog Input Mode",             "INM",  "0|4",       "Passive",  "0-20 mA",    "4-20 mA",       "",          "",             "",             "",   ""   }
 { "",  "",  "SwPanelLock",      "Switch Panel Lock",             "J",    "L|U",       "Passive",  "Locked",     "Unlocked",      "",          "",             "",             "",   ""   }
 { "",  "",  "RelayAlrmOutCtrl", "Relay Alarm Output Ctrl",       "K",    "0|1|2|3",   "Passive",  "Perm Open",  "Perm Closed",   "Norm Open", "Norm Closed",  "",             "",   ""   }
 { "",  "",  "ColorMode",        "Color Mode",                    "M",    "1|2",       "Passive",  "1-color",    "2-color",       "",          "",             "",             "",   ""   }
@@ -35,7 +35,7 @@ pattern
 { "",  "",  "Units",            "Temperature Units",             "U",    "C|F",       "Passive",  "C",          "F",             "",          "",             "",             "",   ""   }
 { "",  "",  "WebServer",        "WebServer",                     "WS",   "0|1",       "Passive",  "Off",        "On",            "",          "",             "",             "",   ""   }
 { "",  "",  "SensorInit",       "Sensor Initialization",         "XI",   "0|1",       "Passive",  "Reset",      "Set",           "",          "",             "",             "",   ""   }
-{ "",  "",  "LaserLEDVideoSw",  "Laser/LED/Video Switching",     "XL",   "0|1|2|3|4", "Passive",  "Off",        "On",            "Flashing",  "SwViaExtTEdg", "SwViaExtTLvl", "",   ""   }
+#{ "",  "",  "LaserLEDVideoSw",  "Laser/LED/Video Switching",     "XL",   "0|1|2|3|4", "Passive",  "Off",        "On",            "Flashing",  "SwViaExtTEdg", "SwViaExtTLvl", "",   ""   }
 { "#", "",  "SensorModelType",  "Sensor Model Type",             "XM",   "L|H",       "Passive",  "Low Temp",   "High Temp",     "",          "",             "",             "",   ""   }
 { "",  "",  "AnalogOutMode",    "Analog Output Mode",            "XO",   "0|4",       "Passive",  "0-20 mA",    "4-20 mA",       "",          "",             "",             "",   ""   }
 { "#", "",  "TriggerStatus",    "Trigger Status",                "XT",   "0|1",       "1 second", "Inactive",   "Active",        "",          "",             "",             "",   ""   }
@@ -44,7 +44,7 @@ pattern
 { "#", "",  "BaudRate",         "Baud Rate (bps)",              "D",    "012|024|096|192|384|576|1152", "Passive", "1200", "2400", "9600", "19200", "38400", "57600", "115200" }
 }
 
-file "floatTemp.template" {
+file "temperature.template" {
 pattern
 { W,   R,   NAME,                DESC,                          CMD,    PREC, SCAN        }
 { "",  "",  "BgTempCorr",        "Background Temp Correction",  "A",    "1"   "Passive"   }

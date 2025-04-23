@@ -3,6 +3,4 @@ record(bi, "$(P)$(R)Err$(NAME)_RBV") {
     field(INP,  "$(P)$(R)ErrorCodes_RBV.B$(BIT) CP")
     field(ZSV,  "NO_ALARM")
     field(OSV,  "MAJOR")
-    field(ZNAM, "$(DESC)")
-    field(ONAM, "$(DESC)")
 }
