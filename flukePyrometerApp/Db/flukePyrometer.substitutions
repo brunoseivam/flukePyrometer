@@ -17,90 +17,90 @@ pattern
 
 file "enum.template" {
 pattern
-{ W,   R,   NAME,               DESC,                            CMD,    CHOICES,     SCAN,       ZRST,         ONST,            TWST,        THST,           FRST,           FVST, SXST }
-{ "",  "",  "AmbCompsCtrl",     "Ambient Compens. Control",      "AC",   "0|1|2"      "Passive",  "No Comp",    "Comp By Cmd",   "Ext Inp",   "",             "",             "",   ""   }
-{ "",  "",  "DigitalFilter",    "Digital Filter",                "DF",   "0|1"        "Passive",  "Off",        "On",            "",          "",             "",             "",   ""   }
-{ "#", "",  "DhcpBootp",        "DHCP / BOOTP",                  "DHCP", "0|1|2",     "Passive",  "Off",        "DHCP On",       "BOOTP On",  "",             "",             "",   ""   }
-{ "",  "",  "EmissSource",      "Emissivity Source",             "ES",   "I|E",       "Passive",  "By E",       "By Analog Inp", "",          "",             "",             "",   ""   }
-{ "#", "",  "RS485Mode",        "RS485 Mode",                    "HM",   "2|4",       "Passive",  "2 wire",     "4 wire",        "",          "",             "",             "",   ""   }
-{ "",  "",  "AnalogInpMode",    "Analog Input Mode",             "INM",  "0|4",       "Passive",  "0-20 mA",    "4-20 mA",       "",          "",             "",             "",   ""   }
-{ "",  "",  "SwPanelLock",      "Switch Panel Lock",             "J",    "L|U",       "Passive",  "Locked",     "Unlocked",      "",          "",             "",             "",   ""   }
-{ "",  "",  "RelayAlrmOutCtrl", "Relay Alarm Output Ctrl",       "K",    "0|1|2|3",   "Passive",  "Perm Open",  "Perm Closed",   "Norm Open", "Norm Closed",  "",             "",   ""   }
-{ "",  "",  "ColorMode",        "Color Mode",                    "M",    "1|2",       "Passive",  "1-color",    "2-color",       "",          "",             "",             "",   ""   }
-{ "",  "",  "OutputFormat",     "Output Format",                 "OIF",  "0|1",       "Passive",  "OneDecimal", "Integer",       "",          "",             "",             "",   ""   }
-{ "",  "",  "AlarmSource",      "Alarm Source",                  "SAS",  "0|1",       "Passive",  "Obj Temp",   "Int Temp",      "",          "",             "",             "",   ""   }
-{ "",  "",  "InvalidCurSmpFlt", "Invalid Current Sample Filter", "SF",   "0|1",       "Passive",  "Off",        "On",            "",          "",             "",             "",   ""   }
-{ "",  "",  "SlopeSource",      "Slope Source",                  "SS",   "I|E",       "Passive",  "By S",       "By Analog Inp", "",          "",             "",             "",   ""   }
-{ "",  "",  "TermResistor",     "Terminator Resistor",           "TR",   "0|1",       "Passive",  "Off",        "On",            "",          "",             "",             "",   ""   }
-{ "",  "",  "Units",            "Temperature Units",             "U",    "C|F",       "Passive",  "C",          "F",             "",          "",             "",             "",   ""   }
-{ "",  "",  "WebServer",        "WebServer",                     "WS",   "0|1",       "Passive",  "Off",        "On",            "",          "",             "",             "",   ""   }
-{ "",  "",  "SensorInit",       "Sensor Initialization",         "XI",   "0|1",       "Passive",  "Reset",      "Set",           "",          "",             "",             "",   ""   }
-#{ "",  "",  "LaserLEDVideoSw",  "Laser/LED/Video Switching",     "XL",   "0|1|2|3|4", "Passive",  "Off",        "On",            "Flashing",  "SwViaExtTEdg", "SwViaExtTLvl", "",   ""   }
-{ "#", "",  "SensorModelType",  "Sensor Model Type",             "XM",   "L|H",       "Passive",  "Low Temp",   "High Temp",     "",          "",             "",             "",   ""   }
-{ "",  "",  "AnalogOutMode",    "Analog Output Mode",            "XO",   "0|4",       "Passive",  "0-20 mA",    "4-20 mA",       "",          "",             "",             "",   ""   }
-{ "#", "",  "TriggerStatus",    "Trigger Status",                "XT",   "0|1",       "1 second", "Inactive",   "Active",        "",          "",             "",             "",   ""   }
-{ "",  "",  "TriggerControl",   "Trigger Control",               "XTC",  "0|1",       "1 second", "Normal",     "EmissAmbCtl",   "",          "",             "",             "",   ""   }
+{ W,   R,   NAME,               DESC,                            CMD,    CHOICES,      SCAN,       EVNT,   ZRST,         ONST,            TWST,        THST,           FRST,           FVST, SXST }
+{ "",  "",  "AmbCompsCtrl",     "Ambient Compens. Control",      "AC",   "0|1|2"       "Passive",  "",     "No Comp",    "Comp By Cmd",   "Ext Inp",   "",             "",             "",   ""   }
+{ "",  "",  "DigitalFilter",    "Digital Filter",                "DF",   "0|1"         "Passive",  "",     "Off",        "On",            "",          "",             "",             "",   ""   }
+{ "#", "",  "DhcpBootp",        "DHCP / BOOTP",                  "DHCP", "0|1|2",      "Passive",  "",     "Off",        "DHCP On",       "BOOTP On",  "",             "",             "",   ""   }
+{ "",  "",  "EmissSource",      "Emissivity Source",             "ES",   "I|E",        "Passive",  "",     "By E",       "By Analog Inp", "",          "",             "",             "",   ""   }
+{ "#", "",  "RS485Mode",        "RS485 Mode",                    "HM",   "2|4",        "Passive",  "",     "2 wire",     "4 wire",        "",          "",             "",             "",   ""   }
+{ "",  "",  "AnalogInpMode",    "Analog Input Mode",             "INM",  "0|4",        "Passive",  "",     "0-20 mA",    "4-20 mA",       "",          "",             "",             "",   ""   }
+{ "",  "",  "SwPanelLock",      "Switch Panel Lock",             "J",    "L|U",        "Passive",  "",     "Locked",     "Unlocked",      "",          "",             "",             "",   ""   }
+{ "",  "",  "RelayAlrmOutCtrl", "Relay Alarm Output Ctrl",       "K",    "0|1|2|3",    "Passive",  "",     "Perm Open",  "Perm Closed",   "Norm Open", "Norm Closed",  "",             "",   ""   }
+{ "",  "",  "ColorMode",        "Color Mode",                    "M",    "1|2",        "Passive",  "",     "1-color",    "2-color",       "",          "",             "",             "",   ""   }
+{ "",  "",  "OutputFormat",     "Output Format",                 "OIF",  "0|1",        "Passive",  "",     "OneDecimal", "Integer",       "",          "",             "",             "",   ""   }
+{ "",  "",  "AlarmSource",      "Alarm Source",                  "SAS",  "0|1",        "Passive",  "",     "Obj Temp",   "Int Temp",      "",          "",             "",             "",   ""   }
+{ "",  "",  "InvalidCurSmpFlt", "Invalid Current Sample Filter", "SF",   "0|1",        "Passive",  "",     "Off",        "On",            "",          "",             "",             "",   ""   }
+{ "",  "",  "SlopeSource",      "Slope Source",                  "SS",   "I|E",        "Passive",  "",     "By S",       "By Analog Inp", "",          "",             "",             "",   ""   }
+{ "",  "",  "TermResistor",     "Terminator Resistor",           "TR",   "0|1",        "Passive",  "",     "Off",        "On",            "",          "",             "",             "",   ""   }
+{ "",  "",  "Units",            "Temperature Units",             "U",    "C|F",        "Passive",  "",     "C",          "F",             "",          "",             "",             "",   ""   }
+{ "",  "",  "WebServer",        "WebServer",                     "WS",   "0|1",        "Passive",  "",     "Off",        "On",            "",          "",             "",             "",   ""   }
+{ "",  "",  "SensorInit",       "Sensor Initialization",         "XI",   "0|1",        "Passive",  "",     "Reset",      "Set",           "",          "",             "",             "",   ""   }
+#{ "",  "",  "LaserLEDVideoSw",  "Laser/LED/Video Switching",     "XL",   "0|1|2|3|4", "Passive",  "",     "Off",        "On",            "Flashing",  "SwViaExtTEdg", "SwViaExtTLvl", "",   ""   }
+{ "#", "",  "SensorModelType",  "Sensor Model Type",             "XM",   "L|H",        "Passive",  "",     "Low Temp",   "High Temp",     "",          "",             "",             "",   ""   }
+{ "",  "",  "AnalogOutMode",    "Analog Output Mode",            "XO",   "0|4",        "Passive",  "",     "0-20 mA",    "4-20 mA",       "",          "",             "",             "",   ""   }
+{ "#", "",  "TriggerStatus",    "Trigger Status",                "XT",   "0|1",        "Event",    "POLL", "Inactive",   "Active",        "",          "",             "",             "",   ""   }
+{ "",  "",  "TriggerControl",   "Trigger Control",               "XTC",  "0|1",        "Event",    "POLL", "Normal",     "EmissAmbCtl",   "",          "",             "",             "",   ""   }
 
 { "#", "",  "BaudRate",         "Baud Rate (bps)",              "D",    "012|024|096|192|384|576|1152", "Passive", "1200", "2400", "9600", "19200", "38400", "57600", "115200" }
 }
 
 file "temperature.template" {
 pattern
-{ W,   R,   NAME,                DESC,                          CMD,    PREC, SCAN        }
-{ "",  "",  "BgTempCorr",        "Background Temp Correction",  "A",    "1"   "Passive"   }
-{ "",  "",  "TopOfmARange",      "Top of mA Range",             "AH",   "1"   "Passive"   }
-{ "",  "",  "BotOfmARange",      "Bottom of mA Range",          "AL",   "1"   "Passive"   }
-{ "",  "",  "AdvHoldThres",      "Advanced Hold Threshold",     "C",    "1"   "Passive"   }
-{ "#", "",  "ExtBoardTemp",      "Extension Board Temperature", "EBT",  "1"   ".1 second" }
-{ "",  "",  "TopOfmATempRange",  "Top of mA Temp Range",        "H",    "1"   "Passive"   }
-{ "",  "",  "BotOfmATempRange",  "Bottom of mA Temp Range",     "L",    "1"   "Passive"   }
-{ "#", "",  "SensIntAmbTemp",    "Sensor Internal Amb Temp",    "I",    "1"   ".1 second" }
-{ "#", "",  "TargetTemp1CNarr",  "Target Temp 1C Narrow",       "N",    "1"   ".1 second" }
-{ "#", "",  "TargetTemp1CWide",  "Target Temp 1C Wide",         "W",    "1"   ".1 second" }
-{ "#", "",  "TargetTemp2C",      "Target Temp 2C",              "T",    "1"   ".1 second" }
-{ "",  "",  "SetTargetTemp",     "Set Target Temperature",      "STT",  "1"   "Passive"   }
-{ "",  "",  "LowTempLimit",      "Low Temperature Limit",       "XB",   "1"   "Passive"   }
-{ "",  "",  "HighTempLimit",     "High Temperature Limit",      "XH",   "1"   "Passive"   }
-{ "",  "",  "Deadband",          "Deadband",                    "XD",   "1"   "Passive"   }
-{ "",  "",  "DecayRate",         "Decay Rate",                  "XE",   "1"   "Passive"   }
-{ "#", "",  "HeaterTemp",        "Heater Temperature",          "XJ",   "1"   ".1 second" }
-{ "",  "",  "SetpointRelayFunc", "Setpoint/Relay Function",     "XS",   "1"   "Passive"   }
-{ "",  "",  "AdvHoldHyst",       "Adv Hold Hysterese",          "XY",   "1"   "Passive"   }
+{ W,   R,   NAME,                DESC,                          CMD,    PREC, SCAN,      EVNT    }
+{ "",  "",  "BgTempCorr",        "Background Temp Correction",  "A",    "1"   "Passive", ""      }
+{ "",  "",  "TopOfmARange",      "Top of mA Range",             "AH",   "1"   "Passive", ""      }
+{ "",  "",  "BotOfmARange",      "Bottom of mA Range",          "AL",   "1"   "Passive", ""      }
+{ "",  "",  "AdvHoldThres",      "Advanced Hold Threshold",     "C",    "1"   "Passive", ""      }
+{ "#", "",  "ExtBoardTemp",      "Extension Board Temperature", "EBT",  "1"   "Event",   "TPOLL" }
+{ "",  "",  "TopOfmATempRange",  "Top of mA Temp Range",        "H",    "1"   "Passive", ""      }
+{ "",  "",  "BotOfmATempRange",  "Bottom of mA Temp Range",     "L",    "1"   "Passive", ""      }
+{ "#", "",  "SensIntAmbTemp",    "Sensor Internal Amb Temp",    "I",    "1"   "Event",   "TPOLL" }
+{ "#", "",  "TargetTemp1CNarr",  "Target Temp 1C Narrow",       "N",    "1"   "Event",   "TPOLL" }
+{ "#", "",  "TargetTemp1CWide",  "Target Temp 1C Wide",         "W",    "1"   "Event",   "TPOLL" }
+{ "#", "",  "TargetTemp2C",      "Target Temp 2C",              "T",    "1"   "Event",   "TPOLL" }
+{ "",  "",  "SetTargetTemp",     "Set Target Temperature",      "STT",  "1"   "Passive", ""      }
+{ "",  "",  "LowTempLimit",      "Low Temperature Limit",       "XB",   "1"   "Passive", ""      }
+{ "",  "",  "HighTempLimit",     "High Temperature Limit",      "XH",   "1"   "Passive", ""      }
+{ "",  "",  "Deadband",          "Deadband",                    "XD",   "1"   "Passive", ""      }
+{ "",  "",  "DecayRate",         "Decay Rate",                  "XE",   "1"   "Passive", ""      }
+{ "#", "",  "HeaterTemp",        "Heater Temperature",          "XJ",   "1"   "Event",   "TPOLL" }
+{ "",  "",  "SetpointRelayFunc", "Setpoint/Relay Function",     "XS",   "1"   "Passive", ""      }
+{ "",  "",  "AdvHoldHyst",       "Adv Hold Hysterese",          "XY",   "1"   "Passive", ""      }
 }
 
 file "float.template" {
 pattern
-{ W,   R,   NAME,                DESC,                         CMD,   PREC, EGU,  MIN,    MAX,      SCAN       }
-{ "",  "",  "AdvHoldWithAvg",    "Advanced Hold With Avg",     "AA",  "1"   "s",  "0",    "300",    "Passive"  }
-{ "",  "",  "AlrmTopmAOutput",   "Alarm Top mA output",        "AHO", "1"   "mA", "20",   "24",     "Passive"  }
-{ "",  "",  "AlrmBotmAOutput",   "Alarm Bottom mA output",     "ALO", "1"   "mA", "0",    "4",      "Passive"  }
-{ "#", "",  "MeasAtten",         "Measured Attenuation",       "B",   "1"   "%",  "0",    "99",     "1 second" }
-{ "",  "",  "BurstSpeed",        "Burst Speed",                "BS",  "0"   "ms", "5",    "10000",  "Passive"  }
-{ "#", "",  "CurrEmissivity",    "Current Emissivity",         "CE",  "3"   "",   "0.1",  "1.1",    "1 second" }
-{ "",  "",  "SensorGain",        "Sensor Gain",                "DG",  "3"   "",   "0.8",  "1.2",    "Passive"  }
-{ "",  "",  "TopSensorGain",     "Top Sensor Gain",            "DGT", "3"   "",   "0.8",  "1.2",    "Passive"  }
-{ "",  "",  "SensorOffset",      "Sensor Offset",              "DO",  "1"   "",   "-200", "200",    "Passive"  }
-{ "",  "",  "TopSensorOffset",   "Top Sensor Offset",          "DOT", "1"   "",   "-200", "200",    "Passive"  }
-{ "",  "",  "Emissivity",        "Emissivity",                 "E",   "3"   "",   "0.1",  "1.1",    "1 second" }
-{ "",  "",  "ValleyHoldTime",    "Valley Hold Time",           "F",   "1"   "s",  "0",    "300",    "Passive"  }
-{ "",  "",  "AverageTime",       "Average Time",               "G",   "1"   "s",  "0",    "300",    "Passive"  }
-{ "#", "",  "AnalogInpmA",       "Analog Input mA",            "IN",  "1"   "mA", "0",    "20",     "1 second" }
-{ "",  "",  "AnalogOutGain",     "Analog Output Gain",         "OUG", "3"   "",   "0.01", "100",    "Passive"  }
-{ "",  "",  "AnalogOutOffset",   "Analog Output Offset",       "OUO", "1"   "",   "-200", "200",    "Passive"  }
-{ "",  "",  "PeakHoldTime",      "Peak Hold Time",             "P",   "1"   "s",  "0",    "300",    "Passive"  }
-{ "#", "",  "WidePower",         "Wide Power",                 "Q",   "5"   "",   "",     "",       "1 second" }
-{ "#", "",  "NarrowPower",       "Narrow Power",               "R",   "5"   "",   "",     "",       "1 second" }
-{ "#", "",  "VideoRelRetDiam",   "Video Rel Reticule Diam",    "RC",  "2",  "",   "",     "",       "1 second" }
-{ "#", "",  "RatioSpecCorrGain", "Ratio Spec Corr Gain",       "RSG", "1",  "",   "",     "",       "1 second" }
-{ "#", "",  "RatioSpecCorrIcpt", "Ratio Spec Corr Intercept",  "RSO", "1",  "",   "",     "",       "1 second" }
-{ "#", "",  "VideoRelRetX",      "Video Rel Reticule X",       "RX",  "2",  "",   "",     "",       "1 second" }
-{ "#", "",  "VideoRelRetY",      "Video Rel Reticule Y",       "RY",  "2",  "",   "",     "",       "1 second" }
-{ "",  "",  "Slope",             "Slope",                      "S",   "3",  "",   "0.85", "1.15",   "Passive"  }
-{ "",  "",  "TCPIPTimeout",      "TCP/IP Timeout Interval",    "TTI", "0",  "s",  "0",    "240",    "Passive"  }
-{ "",  "",  "MultidropAddr",     "Multidrop address",          "XA",  "0",  "",   "0",    "32",     "Passive"  }
-{ "",  "",  "Transmissivity",    "Transmissivity",             "XG",  "2"   "",   "0.1",  "1.1",    "Passive"  }
-{ "",  "",  "AttenToActRelay",   "Atten to Activate Relay",    "Y",   "0"   "%",  "0",    "95",     "Passive"  }
-{ "",  "",  "AttenForFailsafe",  "Atten for Failsafe",         "Z",   "0"   "%",  "0",    "95",     "Passive"  }
+{ W,   R,   NAME,                DESC,                         CMD,   PREC, EGU,  MIN,    MAX,      SCAN       EVNT   }
+{ "",  "",  "AdvHoldWithAvg",    "Advanced Hold With Avg",     "AA",  "1"   "s",  "0",    "300",    "Passive", ""     }
+{ "",  "",  "AlrmTopmAOutput",   "Alarm Top mA output",        "AHO", "1"   "mA", "20",   "24",     "Passive", ""     }
+{ "",  "",  "AlrmBotmAOutput",   "Alarm Bottom mA output",     "ALO", "1"   "mA", "0",    "4",      "Passive", ""     }
+{ "#", "",  "MeasAtten",         "Measured Attenuation",       "B",   "1"   "%",  "0",    "99",     "Event",   "POLL" }
+{ "",  "",  "BurstSpeed",        "Burst Speed",                "BS",  "0"   "ms", "5",    "10000",  "Passive", ""     }
+{ "#", "",  "CurrEmissivity",    "Current Emissivity",         "CE",  "3"   "",   "0.1",  "1.1",    "Event",   "POLL" }
+{ "",  "",  "SensorGain",        "Sensor Gain",                "DG",  "3"   "",   "0.8",  "1.2",    "Passive", ""     }
+{ "",  "",  "TopSensorGain",     "Top Sensor Gain",            "DGT", "3"   "",   "0.8",  "1.2",    "Passive", ""     }
+{ "",  "",  "SensorOffset",      "Sensor Offset",              "DO",  "1"   "",   "-200", "200",    "Passive", ""     }
+{ "",  "",  "TopSensorOffset",   "Top Sensor Offset",          "DOT", "1"   "",   "-200", "200",    "Passive", ""     }
+{ "",  "",  "Emissivity",        "Emissivity",                 "E",   "3"   "",   "0.1",  "1.1",    "Event",   "POLL" }
+{ "",  "",  "ValleyHoldTime",    "Valley Hold Time",           "F",   "1"   "s",  "0",    "300",    "Passive", ""     }
+{ "",  "",  "AverageTime",       "Average Time",               "G",   "1"   "s",  "0",    "300",    "Passive", ""     }
+{ "#", "",  "AnalogInpmA",       "Analog Input mA",            "IN",  "1"   "mA", "0",    "20",     "Event",   "POLL" }
+{ "",  "",  "AnalogOutGain",     "Analog Output Gain",         "OUG", "3"   "",   "0.01", "100",    "Passive", ""     }
+{ "",  "",  "AnalogOutOffset",   "Analog Output Offset",       "OUO", "1"   "",   "-200", "200",    "Passive", ""     }
+{ "",  "",  "PeakHoldTime",      "Peak Hold Time",             "P",   "1"   "s",  "0",    "300",    "Passive", ""     }
+{ "#", "",  "WidePower",         "Wide Power",                 "Q",   "5"   "",   "",     "",       "Event",   "POLL" }
+{ "#", "",  "NarrowPower",       "Narrow Power",               "R",   "5"   "",   "",     "",       "Event",   "POLL" }
+{ "#", "",  "VideoRelRetDiam",   "Video Rel Reticule Diam",    "RC",  "2",  "",   "",     "",       "Event",   "POLL" }
+{ "#", "",  "RatioSpecCorrGain", "Ratio Spec Corr Gain",       "RSG", "1",  "",   "",     "",       "Event",   "POLL" }
+{ "#", "",  "RatioSpecCorrIcpt", "Ratio Spec Corr Intercept",  "RSO", "1",  "",   "",     "",       "Event",   "POLL" }
+{ "#", "",  "VideoRelRetX",      "Video Rel Reticule X",       "RX",  "2",  "",   "",     "",       "Event",   "POLL" }
+{ "#", "",  "VideoRelRetY",      "Video Rel Reticule Y",       "RY",  "2",  "",   "",     "",       "Event",   "POLL" }
+{ "",  "",  "Slope",             "Slope",                      "S",   "3",  "",   "0.85", "1.15",   "Passive", ""     }
+{ "",  "",  "TCPIPTimeout",      "TCP/IP Timeout Interval",    "TTI", "0",  "s",  "0",    "240",    "Passive", ""     }
+{ "",  "",  "MultidropAddr",     "Multidrop address",          "XA",  "0",  "",   "0",    "32",     "Passive", ""     }
+{ "",  "",  "Transmissivity",    "Transmissivity",             "XG",  "2"   "",   "0.1",  "1.1",    "Passive", ""     }
+{ "",  "",  "AttenToActRelay",   "Atten to Activate Relay",    "Y",   "0"   "%",  "0",    "95",     "Passive", ""     }
+{ "",  "",  "AttenForFailsafe",  "Atten for Failsafe",         "Z",   "0"   "%",  "0",    "95",     "Passive", ""     }
 }
 
 file "errorbit.template" {

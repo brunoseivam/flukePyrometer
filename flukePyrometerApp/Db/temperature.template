@@ -11,6 +11,7 @@ $(R=)    field(DESC, "$(DESC)")
 $(R=)    field(DTYP, "stream")
 $(R=)    field(INP,  "@flukePyrometer.proto getFloatWithUnits($(CMD)) $(PORT)")
 $(R=)    field(SCAN, "$(SCAN=Passive)")
+$(R=)    field(EVNT, "$(EVNT=)")
 $(R=)    field(PREC, "$(PREC=1)")
 $(R=)    field(PINI, "YES")
 $(R=)}

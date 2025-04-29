@@ -75,4 +75,5 @@ $(R=)    field(FTST, "$(FTST=)")
 $(R=)    field(FFST, "$(FFST=)")
 $(R=)    field(PINI, "YES")
 $(R=)    field(SCAN, "$(SCAN=Passive)")
+$(R=)    field(EVNT, "$(EVNT=)")
 $(R=)}

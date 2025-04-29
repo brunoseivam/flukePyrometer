@@ -11,4 +11,5 @@ $(R=)    field(DTYP, "stream")
 $(R=)    field(INP,  "@flukePyrometer.proto getString($(CMD)) $(PORT)")
 $(R=)    field(PINI, "YES")
 $(R=)    field(SCAN, "$(SCAN=Passive)")
+$(R=)    field(EVNT, "$(EVNT=)")
 $(R=)}

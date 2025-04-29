@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-22 21:33:58 by bmartins-->
+<!--Saved on 2025-04-28 20:17:06 by bmartins-->
 <display version="2.0.0">
   <name>Fluke Pyrometer $(P)$(R)</name>
   <macros>
     <P>PYRO:</P>
     <R></R>
   </macros>
-  <width>1500</width>
+  <width>1800</width>
+  <height>650</height>
   <widget type="group" version="3.0.0">
     <name>Unit Info</name>
     <y>30</y>
     <width>350</width>
-    <height>190</height>
+    <height>261</height>
     <foreground_color>
       <color red="0" green="128" blue="255">
       </color>
@@ -254,6 +255,64 @@
         </color>
       </off_color>
     </widget>
+    <widget type="label" version="2.0.0">
+      <name>Serial Number_21</name>
+      <text>Temp Poll Rate</text>
+      <y>155</y>
+      <width>115</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Combo_3</name>
+      <pv_name>$(P)$(R)TempPollRate.SCAN</pv_name>
+      <x>125</x>
+      <y>155</y>
+      <width>180</width>
+      <height>20</height>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Serial Number_23</name>
+      <text>Poll Rate</text>
+      <y>180</y>
+      <width>115</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Combo_6</name>
+      <pv_name>$(P)$(R)PollRate.SCAN</pv_name>
+      <x>125</x>
+      <y>180</y>
+      <width>180</width>
+      <height>20</height>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+    </widget>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_40</name>
@@ -277,7 +336,7 @@
   </widget>
   <widget type="group" version="3.0.0">
     <name>Network Info</name>
-    <y>220</y>
+    <y>291</y>
     <width>350</width>
     <height>220</height>
     <foreground_color>
@@ -574,9 +633,9 @@
   </widget>
   <widget type="group" version="3.0.0">
     <name>Serial Info</name>
-    <y>440</y>
+    <y>511</y>
     <width>350</width>
-    <height>120</height>
+    <height>129</height>
     <foreground_color>
       <color red="0" green="128" blue="255">
       </color>

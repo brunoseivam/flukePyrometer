@@ -6,6 +6,21 @@
 
 #TODO: reset RST, XR
 
+record(event, "$(P)$(R)TempPollRate") {
+    field(DESC, "Temperature Poll Rate")
+    field(SCAN, ".1 second")
+    field(EVNT, "TPOLL")
+    field(VAL,  "TPOLL")
+}
+
+record(event, "$(P)$(R)PollRate") {
+    field(DESC, "Poll Rate")
+    field(SCAN, "1 second")
+    field(EVNT, "POLL")
+    field(VAL,  "POLL")
+}
+
+
 record(bo, "$(P)$(R)PollBurstMode") {
     field(DESC, "Pool/Burst Mode")
     field(DTYP, "stream")
