@@ -4,6 +4,7 @@ $(W=)    field(DTYP, "stream")
 $(W=)    field(OUT,  "@flukePyrometer.proto setFloatWithUnits($(CMD)) $(PORT)")
 $(W=)    field(FLNK, "$(P)$(R)$(NAME)_RBV PP")
 $(W=)    field(PREC, "$(PREC=1)")
+$(W=)$(AS=)    info(autosaveFields, "VAL")
 $(W=)}
 
 $(R=)record(ai, "$(P)$(R)$(NAME)_RBV") {

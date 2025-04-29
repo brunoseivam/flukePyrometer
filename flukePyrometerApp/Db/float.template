@@ -7,6 +7,7 @@ $(W=)    field(PREC, "$(PREC=1)")
 $(W=)    field(DRVL, "$(MIN=)")
 $(W=)    field(DRVH, "$(MAX=)")
 $(W=)    field(EGU,  "$(EGU=)")
+$(W=)$(AS=)    info(autosaveFields, "VAL")
 $(W=)}
 
 $(R=)record(ai, "$(P)$(R)$(NAME)_RBV") {

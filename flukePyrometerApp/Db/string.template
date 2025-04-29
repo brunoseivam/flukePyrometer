@@ -3,6 +3,7 @@ $(W=)    field(DESC, "$(DESC)")
 $(W=)    field(DTYP, "stream")
 $(W=)    field(OUT,  "@flukePyrometer.proto setString($(CMD)) $(PORT)")
 $(W=)    field(FLNK, "$(P)$(R)$(NAME) PP")
+$(W=)$(AS=)    info(autosaveFields, "VAL")
 $(W=)}
 
 $(R=)record(stringin, "$(P)$(R)$(NAME)_RBV") {

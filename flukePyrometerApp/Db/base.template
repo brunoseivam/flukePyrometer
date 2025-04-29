@@ -1,10 +1,9 @@
-#TODO: autosave
-
 record(event, "$(P)$(R)TempPollRate") {
     field(DESC, "Temperature Poll Rate")
     field(SCAN, ".1 second")
     field(EVNT, "TPOLL")
     field(VAL,  "TPOLL")
+    info(autosaveFields, "SCAN")
 }
 
 record(event, "$(P)$(R)PollRate") {
@@ -12,6 +11,7 @@ record(event, "$(P)$(R)PollRate") {
     field(SCAN, "1 second")
     field(EVNT, "POLL")
     field(VAL,  "POLL")
+    info(autosaveFields, "SCAN")
 }
 
 record(bo, "$(P)$(R)PollBurstMode") {

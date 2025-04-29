@@ -35,6 +35,7 @@ $(W=)    field(TTST, "$(TTST=)")
 $(W=)    field(FTST, "$(FTST=)")
 $(W=)    field(FFST, "$(FFST=)")
 $(W=)    field(FLNK, "$(P)$(R)$(NAME)_RBV PP")
+$(W=)$(AS=)    info(autosaveFields, "VAL")
 $(W=)}
 
 $(R=)record(mbbi, "$(P)$(R)$(NAME)_RBV") {
