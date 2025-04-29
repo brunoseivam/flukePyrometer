@@ -1,10 +1,4 @@
-#TODO: OC (output current)
-
 #TODO: autosave
-
-#TODO: variable scan rate
-
-#TODO: reset RST, XR
 
 record(event, "$(P)$(R)TempPollRate") {
     field(DESC, "Temperature Poll Rate")
@@ -19,7 +13,6 @@ record(event, "$(P)$(R)PollRate") {
     field(EVNT, "POLL")
     field(VAL,  "POLL")
 }
-
 
 record(bo, "$(P)$(R)PollBurstMode") {
     field(DESC, "Pool/Burst Mode")
